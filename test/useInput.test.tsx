@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, renderHook, screen } from '@testing-library/react'
 import { beforeEach, describe, expect, it } from 'vitest'
-import { UseFocusInput, useFocusInput } from '~/lib/useFocusInput'
+import { UseFocusInput, useInput } from '~/lib/useInput'
 import { resetDom } from './helpers/reset-dom'
 
 const ControlledInput: React.FC<{
@@ -18,7 +18,7 @@ describe('useFocus()', () => {
 	beforeEach<LocalTestContext>(ctx => {
 		resetDom()
 
-		const { result } = renderHook(() => useFocusInput())
+		const { result } = renderHook(() => useInput())
 		const { ref, focus, blur } = result.current
 		render(<ControlledInput refProp={ref} id={INPUT_ID} />)
 
@@ -27,7 +27,7 @@ describe('useFocus()', () => {
 	})
 
 	it('is defined', () => {
-		expect(useFocusInput).toBeDefined()
+		expect(useInput).toBeDefined()
 	})
 
 	it('an input has not initial focus', () => {

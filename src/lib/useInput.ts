@@ -6,7 +6,12 @@ export interface UseFocusInput {
 	blur: () => void
 }
 
-export const useFocusInput = (initialFocus = false): UseFocusInput => {
+/**
+ * Control the focus and blur of an input element
+ * @param [initialFocus=false] - boolean - Whether or not to focus the input on mount.
+ * @returns An object with a `ref`, `focus()`, and `blur()` properties.
+ */
+export const useInput = (initialFocus = false): UseFocusInput => {
 	const ref = useRef<HTMLInputElement>(null)
 
 	useEffect(() => {
@@ -24,4 +29,4 @@ export const useFocusInput = (initialFocus = false): UseFocusInput => {
 	return { ref, focus, blur }
 }
 
-export default useFocusInput
+export default useInput
