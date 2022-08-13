@@ -9,12 +9,14 @@ describe('useMount()', () => {
 
 	it('should return true when component is mounted', () => {
 		const { result } = renderHook(() => useIsMounted())
-		expect(result.current).toEqual({ current: true })
+		const isMounted = result.current()
+		expect(isMounted).toBe(true)
 	})
 
 	it('should return false when component is unmounted', () => {
 		const { result, unmount } = renderHook(() => useIsMounted())
 		unmount()
-		expect(result.current).toEqual({ current: false })
+		const isMounted = result.current()
+		expect(isMounted).toBe(false)
 	})
 })
