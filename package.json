@@ -1,0 +1,92 @@
+{
+	"name": "@marsi/react-hooks",
+	"type": "module",
+	"packageManager": "pnpm@7.9.0",
+	"private": false,
+	"description": "Common React hooks. Made with TypeScript.",
+	"version": "0.0.1",
+	"author": "Luis Marsiglia <marsiglia.business@gmail.com>",
+	"homepage": "https://github.com/marsidev/react-hooks#readme",
+	"keywords": [
+		"react",
+		"react-hooks",
+		"hooks",
+		"typescript"
+	],
+	"license": "ISC",
+	"scripts": {
+		"build": "unbuild",
+		"dev": "unbuild --stub",
+		"lint": "eslint .",
+		"prepublishOnly": "nr build",
+		"release": "bumpp && npm publish",
+		"start": "esno src/index.ts",
+		"test": "vitest",
+		"typecheck": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"@antfu/ni": "^0.17.2",
+		"@antfu/utils": "^0.5.2",
+		"@testing-library/dom": "^8.17.1",
+		"@testing-library/jest-dom": "^5.16.5",
+		"@testing-library/react": "^13.3.0",
+		"@testing-library/user-event": "^14.4.3",
+		"@types/node": "^18.7.1",
+		"@types/react": "^18.0.17",
+		"@types/react-dom": ">=16.9.0",
+		"@types/testing-library__jest-dom": "^5.14.5",
+		"@typescript-eslint/eslint-plugin": "^5.33.0",
+		"@typescript-eslint/parser": "^5.33.0",
+		"bumpp": "^8.2.1",
+		"eslint": "^8.21.0",
+		"eslint-config-marsi": "^1.1.1",
+		"eslint-config-standard": "^17.0.0",
+		"eslint-import-resolver-typescript": "^3.4.0",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-n": "^15.2.4",
+		"eslint-plugin-promise": "^6.0.0",
+		"eslint-plugin-react": "^7.30.1",
+		"esno": "^0.16.3",
+		"jsdom": "^20.0.0",
+		"npm-run-all": "^4.1.5",
+		"pnpm": "^7.9.0",
+		"react": ">=16.9.0",
+		"react-dom": ">=16.9.0",
+		"rimraf": "^3.0.2",
+		"typescript": "4.7.4",
+		"unbuild": "^0.8.8",
+		"vitest": "^0.21.1"
+	},
+	"peerDependencies": {
+		"react": ">=16.9.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/marsidev/react-hooks.git"
+	},
+	"bugs": {
+		"url": "https://github.com/marsidev/react-hooks/issues"
+	},
+	"sideEffects": false,
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"require": "./dist/index.cjs",
+			"import": "./dist/index.mjs"
+		}
+	},
+	"main": "./dist/index.mjs",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"typesVersions": {
+		"*": {
+			"*": [
+				"./dist/*",
+				"./dist/index.d.ts"
+			]
+		}
+	},
+	"files": [
+		"dist"
+	]
+}
