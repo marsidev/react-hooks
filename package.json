@@ -13,7 +13,7 @@
 		"hooks",
 		"typescript"
 	],
-	"license": "ISC",
+	"license": "MIT",
 	"scripts": {
 		"build": "unbuild",
 		"dev": "unbuild --stub",
