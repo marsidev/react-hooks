@@ -25,7 +25,7 @@ const { offsetPassed, scrollDirection, scrollPosition } = useScrollY(300)
 
 ## Available Hooks
 - `useScrollY`
-- `useIsMounted`
+- `useRendered`
 - `useInput`
 	
 [npm-badge]: https://img.shields.io/npm/v/@marsidev/react-hooks.svg
