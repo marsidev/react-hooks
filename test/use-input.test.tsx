@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, renderHook, screen } from '@testing-library/react'
 import { beforeEach, describe, expect, it } from 'vitest'
-import { UseFocusInput, useInput } from '~/lib/useInput'
+import { UseFocusInput, useInput } from '~/lib/use-input'
 import { resetDom } from './helpers/reset-dom'
 
 const ControlledInput: React.FC<{
