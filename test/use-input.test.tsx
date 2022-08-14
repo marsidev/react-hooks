@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, renderHook, screen } from '@testing-library/react'
 import { beforeEach, describe, expect, it } from 'vitest'
-import { UseFocusInput, useInput } from '~/lib/use-input'
+import { UseInputResult, useInput } from '~/lib/use-input'
 import { resetDom } from './helpers/reset-dom'
 
 const ControlledInput: React.FC<{
@@ -11,7 +11,7 @@ const ControlledInput: React.FC<{
 	return <input ref={refProp} data-testid={id} />
 }
 
-export type LocalTestContext = UseFocusInput
+export type LocalTestContext = UseInputResult
 const INPUT_ID = 'my-input'
 
 describe('useFocus()', () => {

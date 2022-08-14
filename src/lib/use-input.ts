@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef } from 'react'
 
-export interface UseFocusInput {
+export interface UseInputResult {
 	ref: React.RefObject<HTMLInputElement>
 	focus: (options?: FocusOptions) => void
 	blur: () => void
@@ -11,7 +11,7 @@ export interface UseFocusInput {
  * @param [initialFocus=false] - boolean - Whether or not to focus the input on mount.
  * @returns An object with a `ref`, `focus()`, and `blur()` properties.
  */
-export const useInput = (initialFocus = false): UseFocusInput => {
+export const useInput = (initialFocus = false): UseInputResult => {
 	const ref = useRef<HTMLInputElement>(null)
 
 	useEffect(() => {
