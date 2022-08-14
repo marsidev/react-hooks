@@ -20,7 +20,7 @@ describe('useFocus()', () => {
 
 		const { result } = renderHook(() => useInput())
 		const { ref, focus, blur } = result.current
-		render(<ControlledInput refProp={ref} id={INPUT_ID} />)
+		render(<ControlledInput id={INPUT_ID} refProp={ref} />)
 
 		ctx.focus = focus
 		ctx.blur = blur
