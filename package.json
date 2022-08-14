@@ -4,7 +4,7 @@
 	"packageManager": "pnpm@7.9.0",
 	"private": false,
 	"description": "Common React hooks. Made with TypeScript.",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"author": "Luis Marsiglia <marsiglia.business@gmail.com>",
 	"homepage": "https://github.com/marsidev/react-hooks#readme",
 	"keywords": [
