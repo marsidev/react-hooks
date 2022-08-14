@@ -1,3 +1,4 @@
+// TODO: A test for this hook is missing.
 import { useCallback, useEffect, useState } from 'react'
 
 export type ScrollYDirection = 'up' | 'down' | null
