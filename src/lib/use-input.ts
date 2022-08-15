@@ -8,15 +8,15 @@ export interface UseInputResult {
 
 /**
  * Control the focus and blur of an input element
- * @param [initialFocus=false] - boolean - Whether or not to focus the input on mount.
+ * @param [autoFocus=false] - boolean - Whether or not to focus the input on mount.
  * @returns An object with a `ref`, `focus()`, and `blur()` properties.
  */
-export const useInput = (initialFocus = false): UseInputResult => {
+export const useInput = (autoFocus = false): UseInputResult => {
 	const ref = useRef<HTMLInputElement>(null)
 
 	useEffect(() => {
-		initialFocus && ref.current?.focus()
-	}, [ref, initialFocus])
+		autoFocus && ref.current?.focus()
+	}, [ref, autoFocus])
 
 	const focus = useCallback((opts?: FocusOptions) => {
 		ref.current?.focus(opts)
