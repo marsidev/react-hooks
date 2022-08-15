@@ -1,3 +1,4 @@
+export * from './use-copy-element-to-clipboard'
 export * from './use-copy-to-clipboard'
 export * from './use-input'
 export * from './use-rendered'

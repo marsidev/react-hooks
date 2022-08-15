@@ -88,5 +88,8 @@
 	},
 	"files": [
 		"dist"
-	]
+	],
+	"dependencies": {
+		"html-to-image": "1.10.0"
+	}
 }

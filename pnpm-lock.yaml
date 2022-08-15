@@ -23,6 +23,7 @@ specifiers:
   eslint-plugin-promise: ^6.0.0
   eslint-plugin-react: ^7.30.1
   esno: ^0.16.3
+  html-to-image: 1.10.0
   jsdom: ^20.0.0
   npm-run-all: ^4.1.5
   pnpm: ^7.9.0
@@ -32,6 +33,9 @@ specifiers:
   typescript: 4.7.4
   unbuild: ^0.8.8
   vitest: ^0.21.1
+
+dependencies:
+  html-to-image: 1.10.0
 
 devDependencies:
   '@antfu/ni': 0.17.2
@@ -2409,6 +2413,10 @@ packages:
     dependencies:
       whatwg-encoding: 2.0.0
     dev: true
+
+  /html-to-image/1.10.0:
+    resolution: {integrity: sha512-K2jLOu5piLa8Lwv67gmSSDBOAw3ZjD/4MdvbIlsqOzcm0+wPA3VjshJaYLKUE9N9xZaaR/kfxm1Mv0TM+nfyxw==}
+    dev: false
 
   /http-proxy-agent/5.0.0:
     resolution: {integrity: sha512-n2hY8YdoRE1i7r6M0w9DIw5GgZN0G25P8zLCRQ8rjXtTU3vsNFBI/vWK/UIeE6g5MUUz6avwAPXmL6Fy9D/90w==}

@@ -29,3 +29,32 @@ export const copyTextToClipboard = async (text: string) => {
 	}
 }
 
+/**
+ * Copy a blob to the clipboard, using the Clipboard API
+ * @param blob - The blob to copy to the clipboard.
+ * @returns The return value is a boolean indicating whether the copy operation was successful.
+ */
+export const copyBlobToClipboard = async (blob: Blob | null) => {
+	const canCopyBlob =
+		'clipboard' in navigator &&
+		'write' in navigator.clipboard &&
+		'ClipboardItem' in window &&
+		'toBlob' in HTMLCanvasElement.prototype
+
+	if (!blob) {
+		throw new Error('There is nothing to copy')
+	}
+
+	if (!canCopyBlob) {
+		throw new Error('Copy blob to clipboard not supported')
+	}
+
+	try {
+		const item = new ClipboardItem({ 'image/png': blob })
+		await navigator.clipboard.write([item])
+		return true
+	} catch (error) {
+		console.warn('Error copying blob to clipboard', error)
+		return false
+	}
+}
