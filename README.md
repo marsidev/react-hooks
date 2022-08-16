@@ -7,19 +7,19 @@ Inspired by [usehooks-ts], [@restart/hooks], and [@chakra-ui/hooks].
 
 ## Install
 - Using npm
-	```bash
-	npm i @marsidev/react-hooks
-	```
+  ```bash
+  npm i @marsidev/react-hooks
+  ```
 
 - Using yarn
-	```bash
-	yarn add @marsidev/react-hooks
-	```
+  ```bash
+  yarn add @marsidev/react-hooks
+  ```
 
 - Using pnpm
-	```bash
-	pnpm add @marsidev/react-hooks
-	```
+  ```bash
+  pnpm add @marsidev/react-hooks
+  ```
 
 ## Usage
 ```jsx
@@ -27,16 +27,16 @@ import { useScrollY } from '@marsidev/react-hooks'
 import { Header, Footer, ScrollToTop } from '~/components'
 
 export const Layout = ({ children }) => {
-	const { offsetPassed } = useScrollY(400)
+  const { offsetPassed } = useScrollY(400)
 
-	return (
-		<div>
-			<Header />
-			<main>{children}</main>
-			<Footer />
-			{offsetPassed && <ScrollToTop />}
-		</div>
-	)
+  return (
+    <div>
+      <Header />
+      <main>{children}</main>
+      <Footer />
+      {offsetPassed && <ScrollToTop />}
+    </div>
+  )
 }
 ```
 
@@ -48,7 +48,7 @@ export const Layout = ({ children }) => {
 - `useSafeLayoutEffect`
 - `useScrollY`
 - `useWindowSize`
-	
+
 [npm-badge]: https://img.shields.io/npm/v/@marsidev/react-hooks.svg
 [npm]: https://www.npmjs.com/package/@marsidev/react-hooks
 [antfu/starter-ts]: https://github.com/antfu/starter-ts
