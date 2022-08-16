@@ -9,7 +9,21 @@ export interface UseCopyToClipboardResult {
 /**
  * React hook to copy content to clipboard when needed.
  *
- * @returns an object with a `copiedText` state and a `onCopy` function to execute the copy
+ * @returns An object with a `copiedText` state and a `onCopy` function to execute the copy
+ *
+ * @example
+ * ```jsx
+ * import { useCopyToClipboard } from '@marsidev/react-hooks'
+ * import { MyButton } from '~/components'
+ * ...
+ * const { copiedText, onCopy } = useCopyToClipboard()
+ * ...
+ * return (
+ *		<MyButton onClick={() => onCopy('text to copy')}>
+ *			Copy to clipboard
+ *		</MyButton>
+ * )
+ * ```
  */
 export const useCopyToClipboard = (): UseCopyToClipboardResult => {
 	const [copiedText, setCopiedText] = useState<string | null>(null)

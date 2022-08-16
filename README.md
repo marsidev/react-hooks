@@ -1,5 +1,9 @@
 # @marsidev/react-hooks [![npm][npm-badge]][npm]
-A collection of common React hooks. Made with TypeScript. Bootstraped with [antfu/starter-ts]. Inspired by [usehooks-ts], and [@restart/hooks].
+A collection of common React hooks. Made with TypeScript. 
+
+Bootstraped with [antfu/starter-ts]. 
+
+Inspired by [usehooks-ts], [@restart/hooks], and [@chakra-ui/hooks].
 
 ## Install
 - Using npm
@@ -18,12 +22,27 @@ A collection of common React hooks. Made with TypeScript. Bootstraped with [antf
 	```
 
 ## Usage
-```js
+```jsx
 import { useScrollY } from '@marsidev/react-hooks'
-const { offsetPassed, scrollDirection, scrollPosition } = useScrollY(300)
+import { Header, Footer, ScrollToTop } from '~/components'
+
+export const Layout = ({ children }) => {
+	const { offsetPassed } = useScrollY(400)
+
+	return (
+		<div>
+			<Header />
+			<main>{children}</main>
+			<Footer />
+			{offsetPassed && <ScrollToTop />}
+		</div>
+	)
+}
 ```
 
 ## Available Hooks
+- `useCopyElementToClipboard`
+- `useCopyToClipboard`
 - `useInput`
 - `useRendered`
 - `useSafeLayoutEffect`
@@ -35,3 +54,4 @@ const { offsetPassed, scrollDirection, scrollPosition } = useScrollY(300)
 [antfu/starter-ts]: https://github.com/antfu/starter-ts
 [usehooks-ts]: https://usehooks-ts.com
 [@restart/hooks]: https://www.npmjs.com/package/@restart/hooks
+[@chakra-ui/hooks]: https://github.com/chakra-ui/chakra-ui/tree/main/packages/hooks
