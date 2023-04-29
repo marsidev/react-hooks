@@ -9,14 +9,14 @@
   <a href="LICENSE.md"><img src="https://img.shields.io/github/license/sourcerer-io/hall-of-fame.svg?colorB=ff0000"></a>
   <a href="https://github.com/vitest-dev/vitest"><img src="https://img.shields.io/badge/tested_with-vitest-edd532.svg" alt="Tested with Vitest"></a>
   <a href="https://meercode.io/marsidev/react-hooks"><img src="https://meercode.io/badge/marsidev/react-hooks?type=ci-score" alt="CI Score"></a>
-	<a href="https://twitter.com/marsigliacr"><img src="https://img.shields.io/twitter/follow/marsigliacr.svg?style=social" alt="Twitter Follow" /></a>
+	<a href="https://twitter.com/marsidev"><img src="https://img.shields.io/twitter/follow/marsidev.svg?style=social" alt="Twitter Follow" /></a>
 </p>
 
 ## Introduction
 
 This is a collection of common React Hooks that I use in my React projects.
 
-Bootstraped with [antfu/starter-ts]. 
+Bootstraped with [antfu/starter-ts].
 
 Inspired by [usehooks-ts], [@restart/hooks], and [@chakra-ui/hooks].
 
